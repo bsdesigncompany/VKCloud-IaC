@@ -1,0 +1,11 @@
+
+terraform.tfstate.backup
+.terraform/providers/registry.terraform.io/mailrucloudsolutions/mcs/0.4.6/linux_amd64/terraform-provider-mcs_0.4.6
+.terraform/providers/registry.terraform.io/terraform-provider-openstack/openstack/1.46.0/linux_amd64/CHANGELOG.md
+.terraform/providers/registry.terraform.io/terraform-provider-openstack/openstack/1.46.0/linux_amd64/LICENSE
+.terraform.lock.hcl
+.terraform/providers/registry.terraform.io/terraform-provider-openstack/openstack/1.46.0/linux_amd64/README.md
+.terraform/providers/registry.terraform.io/terraform-provider-openstack/openstack/1.46.0/linux_amd64/terraform-provider-openstack_v1.46.0
+keys/terraform.pem
+keys/terraform.pem.pub
+scripts/tf_setenv.sh
