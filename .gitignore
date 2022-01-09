@@ -10,3 +10,4 @@ keys/terraform.pem
 keys/terraform.pem.pub
 scripts/tf_setenv.sh
 *.tfstate
+terraform.tfstate

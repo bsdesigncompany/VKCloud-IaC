@@ -73,3 +73,19 @@ variable "db_instance_names" {
     "db-instance-2",
   "db-instance-3"]
 }
+
+# --------------------------
+variable "db-instance-flavor" {
+  type    = string
+  default = "Basic-1-2-20"
+}
+
+variable "db-type" {
+  type    = string
+  default = "mysql"
+}
+
+variable "db-type-version" {
+  type    = string
+  default = "5.7"
+}

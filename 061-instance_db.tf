@@ -1,5 +1,41 @@
-#### INSTANCE DB ####
+resource "mcs_db_instance" "db-instance" {
+  name = "db-instance"
 
+  datastore {
+    type    = var.db-type
+    version = var.db-type-version
+  }
+
+  keypair = openstack_compute_keypair_v2.user_key.id
+  #  public_access = true
+
+  flavor_id = data.openstack_compute_flavor_v2.db.id
+
+  size        = 8
+  volume_type = "ceph-ssd"
+
+  disk_autoexpand {
+    autoexpand    = true
+    max_disk_size = 1000
+  }
+
+  network {
+    uuid = openstack_networking_network_v2.generic.id
+  }
+
+  capabilities {
+    name = "node_exporter"
+    settings = {
+      "listen_port" : "9100"
+    }
+  }
+}
+
+
+
+
+#### INSTANCE DB ####
+/*
 # Create instance
 #
 resource "openstack_compute_instance_v2" "db" {
@@ -41,3 +77,4 @@ resource "openstack_compute_floatingip_associate_v2" "db" {
   floating_ip = openstack_networking_floatingip_v2.db[each.key].address
   instance_id = openstack_compute_instance_v2.db[each.key].id
 }
+*/
