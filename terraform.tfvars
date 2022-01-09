@@ -11,10 +11,13 @@ network_db = {
 }
 
 #instances configuration
-image       = "Ubuntu-18.04-Standard"
-public_key  = "./keys/terraform.pem.pub"
-flavor_http = "Basic-1-1-10"
-flavor_db   = "Basic-1-1-10"
+image               = "Ubuntu-18.04-Standard"
+public_key          = "./keys/terraform.pem.pub"
+flavor_http         = "Basic-1-1-10"
+http_instance_names = ["http-instance-1"]
 
-http_instance_names = ["http-instance-1", "http-instance-2"]
-db_instance_names   = ["db-instance-1"]
+#database instance
+db_instance_names  = ["db-instance"]
+db-instance-flavor = "Basic-1-2-20"
+db-type            = "mysql"
+db-type-version    = "5.7"
