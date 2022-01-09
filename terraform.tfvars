@@ -21,3 +21,4 @@ db_instance_names  = ["db-instance"]
 db-instance-flavor = "Basic-1-2-20"
 db-type            = "mysql"
 db-type-version    = "5.7"
+db-fixed-ip        = "192.168.2.20"

@@ -32,7 +32,7 @@ variable "dns_ip" {
 #### VM HTTP parameters ####
 variable "flavor_http" {
   type    = string
-  default = "t2.medium"
+  default = "t2.small"
 }
 
 variable "network_http" {
@@ -74,6 +74,8 @@ variable "db_instance_names" {
   "db-instance-3"]
 }
 
+
+
 # --------------------------
 variable "db-instance-flavor" {
   type    = string
@@ -88,4 +90,8 @@ variable "db-type" {
 variable "db-type-version" {
   type    = string
   default = "5.7"
+}
+variable "db-fixed-ip" {
+  type    = string
+  default = "192.168.2.20"
 }

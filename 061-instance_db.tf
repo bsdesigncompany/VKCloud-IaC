@@ -20,7 +20,8 @@ resource "mcs_db_instance" "db-instance" {
   }
 
   network {
-    uuid = openstack_networking_network_v2.generic.id
+    uuid        = openstack_networking_network_v2.generic.id
+    fixed_ip_v4 = var.db-fixed-ip
   }
 
   capabilities {
